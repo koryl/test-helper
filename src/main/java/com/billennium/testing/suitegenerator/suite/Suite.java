@@ -16,12 +16,12 @@ public class Suite {
 
     @JacksonXmlProperty(localName = "test")
     @JacksonXmlElementWrapper(useWrapping = false)
-    private List< Test > tests;
+    private List<Test> tests;
 
     public Suite(String name) {
 
         this.name = name;
-        this.tests = new ArrayList <Test> ();
+        this.tests = new ArrayList<>();
     }
 
     public void addTest(String testname, List<String> params, String className) {
@@ -60,11 +60,12 @@ public class Suite {
         void addParam(List<String> parameters) {
 
             int iterator = 1;
-            for(String string : parameters) {
-                param.add(new Parameter("Data"+iterator, string));
+            for (String string : parameters) {
+                param.add(new Parameter("Data" + iterator, string));
                 iterator++;
             }
         }
+
         void addClass(String name) {
             klasses.addClasses(name);
         }
@@ -88,10 +89,10 @@ public class Suite {
 
         @JacksonXmlProperty(localName = "class")
         @JacksonXmlElementWrapper(useWrapping = false)
-        private List < Class > classes;
+        private List<Class> classes;
 
         Classes() {
-            this.classes = new ArrayList< Class >();
+            this.classes = new ArrayList<>();
         }
 
         void addClasses(String name) {

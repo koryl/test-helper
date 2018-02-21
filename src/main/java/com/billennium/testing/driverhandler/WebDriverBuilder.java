@@ -9,6 +9,9 @@ import java.net.URL;
 
 import static com.billennium.testing.Constants.DRIVER_PATH;
 
+/**
+ * Class created to handle WebDriver instance.
+ */
 public abstract class WebDriverBuilder<SELF, DRIVER extends WebDriver> {
 
     private URL endpoint;
@@ -23,9 +26,13 @@ public abstract class WebDriverBuilder<SELF, DRIVER extends WebDriver> {
 
     public static class ChromeDriverBuilder extends WebDriverBuilder<ChromeDriverBuilder, ChromeDriver> {
 
+        /**
+         * Builds ChromeDriver instance.
+         *
+         * @return ChromeDriver instance
+         */
         public ChromeDriver build() {
-            String driverPath = DRIVER_PATH + "chromedriver.exe";
-            System.setProperty("webdriver.chrome.driver", driverPath);
+            System.setProperty("webdriver.chrome.driver", DRIVER_PATH);
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");
             return new ChromeDriver(options);

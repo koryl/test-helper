@@ -16,14 +16,25 @@ import static com.billennium.testing.reporter.ReportManager.getTest;
 import static java.time.LocalDateTime.now;
 import static java.time.format.DateTimeFormatter.ofPattern;
 
-public class ScreenshotProvider {
+/**
+ * Easy way for handling with taking screenshots. Includes method for generating a file name related to an executed test
+ * and adding screenshots to Test Execution Report.
+ * Best way is to use this class alongside with TestNG <i>ITestListener</i> to control a status of a current test step.
+ */
+public abstract class ScreenshotProvider {
 
+    /**
+     * Takes a screenshot and attaches it to Test Execution Report.
+     * @param testName a test name of current test method
+     * @param isSuccess a status of current test method
+     * @param driver an instance of WebDriver
+     */
     public synchronized static void takeScreenshot(String testName, boolean isSuccess, WebDriver driver) {
 
-        String status;
-        String path;
-
         try {
+            String status;
+            String path;
+
             if (isSuccess) {
                 status = "Success";
             } else {
@@ -32,9 +43,8 @@ public class ScreenshotProvider {
             path = generateFilePath(status, testName);
             takeScreenshot(path, driver);
             getTest().get().info(status, MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-        } catch (
-                IOException e)
-        {
+
+        } catch (IOException e) {
             Log.error("Cannot add screenshot to the report: " + e.getMessage());
         }
     }

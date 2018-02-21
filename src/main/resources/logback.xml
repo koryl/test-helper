@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>%d{HH:mm:ss} %-5level %logger{35} - %msg%n</Pattern>
         </layout>
     </appender>
 
-    <timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss"/>
-
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <immediateFlush>true</immediateFlush>
-        <file>target/test-output/log-${bySecond}.txt</file>
+        <file>${output.test.log.file}</file>
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>%d{HH:mm:ss.SSS} %-5level- %msg%n</Pattern>
         </layout>

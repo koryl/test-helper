@@ -1,5 +1,6 @@
 package com.billennium.testing.suitegenerator.xlsreader;
 
+import com.billennium.testing.Constants;
 import com.billennium.testing.logger.Log;
 import com.billennium.testing.suitegenerator.suite.Suite;
 import com.codoid.products.exception.FilloException;
@@ -11,6 +12,8 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.File;
 import java.util.List;
 
+import static com.billennium.testing.Constants.PROJECT_NAME;
+import static com.billennium.testing.Constants.TEST_SUITE_FILE;
 import static com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator.Feature.WRITE_XML_DECLARATION;
 import static java.util.Arrays.asList;
 
@@ -42,9 +45,9 @@ public class XlsConverter {
 
         XmlMapper xmlMapper = new XmlMapper();
         xmlMapper.configure(WRITE_XML_DECLARATION, true);
-        Suite suite = new Suite("Dependomat");
-        try {
+        Suite suite = new Suite(PROJECT_NAME);
 
+        try {
             while (recordset.next()) {
                 String testName = recordset.getField("TestCaseDescription");
                 String className = recordset.getField("ClassName");
@@ -56,10 +59,12 @@ public class XlsConverter {
                 }
             }
             xmlMapper.writerWithDefaultPrettyPrinter()
-                    .writeValue(new File("src/test/resources/dependomat-testng.xml"), suite);
+                    .writeValue(new File(Constants.TEST_SETUP + TEST_SUITE_FILE), suite);
             Log.debug("Test suite was generated properly.");
+
         } catch (Exception e) {
             Log.error("Cannot create test suites: " + e.getMessage());
+
         } finally {
             recordset.close();
         }

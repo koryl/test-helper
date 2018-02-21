@@ -5,12 +5,31 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 import static com.billennium.testing.actions.Randomizer.Type.*;
 
+/**
+ * It is used for populating fields or text boxes with random String values.
+ * It logs actions and displaying what String was generated (on Debug level).
+ */
 public class Randomizer {
 
-    public synchronized String generate(int length) {
+    /**
+     * Generates random alphanumeric String.
+     *
+     * @param length length of String to generate
+     *
+     * @return random alphanumeric String
+     */
+    public static synchronized String generate(int length) {
         return generate(length, ALPHANUMERIC);
     }
 
+    /**
+     * Generates random String. It must be provided what the type of String should be generated:
+     * NUMBERS, LETTERS or ALPHANUMERIC.
+     *
+     * @param length length of String to generate
+     * @param typeOfString indicates what the type of String to generate (NUMBERS, LETTERS, ALPHANUMERIC)
+     * @return random String
+     */
     public static synchronized String generate(int length, Type typeOfString) {
 
         switch (typeOfString) {

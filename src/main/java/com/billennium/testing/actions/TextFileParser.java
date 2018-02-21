@@ -9,8 +9,18 @@ import java.util.List;
 
 import static com.billennium.testing.Constants.TEST_DATA_DIRECTORY;
 
+/**
+ * Easy file parser to use in Page Objects. A file should be placed in TEST_DATA_DIRECTORY.
+ */
 public class TextFileParser {
 
+    /**
+     * Reads test parameters from a text file. Each line should contain one parameter.
+     * A text file should be placed in <b>TEST_DATA_DIRECTORY</b>
+     *
+     * @param fileName name of a .txt file which contains parameter
+     * @return List with test data parameters
+     */
     public static synchronized List<String> readParametersFromFile(String fileName) {
         List<String> resultList = null;
         try {

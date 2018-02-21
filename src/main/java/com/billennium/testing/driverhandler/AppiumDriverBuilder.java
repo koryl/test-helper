@@ -7,8 +7,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.URL;
 
-import static com.billennium.testing.Constants.APP_PATH;
+import static com.billennium.testing.Constants.*;
 
+/**
+ * Class created to handle AppiumDriver instance.
+ */
 public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 
     protected URL endpoint;
@@ -26,11 +29,16 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
+        /**
+         * Builds AndroidDriver instance.
+         *
+         * @return AndroidDriver instance
+         */
         public AndroidDriver build() {
 
-            capabilities.setCapability("platformName", System.getProperty("platformName"));
-            capabilities.setCapability("platformVersion", System.getProperty("platformVersion"));
-            capabilities.setCapability("deviceName", System.getProperty("deviceName"));
+            capabilities.setCapability("platformName", PLATFORM_NAME);
+            capabilities.setCapability("platformVersion", PLATFORM_VERSION);
+            capabilities.setCapability("deviceName", DEVICE_NAME);
             capabilities.setCapability("noReset", System.getProperty("noReset"));
             capabilities.setCapability("app", APP_PATH);
 
@@ -42,11 +50,16 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
+        /**
+         * Builds IOSDriver instance.
+         *
+         * @return IOSDriver instance
+         */
         public IOSDriver build() {
 
-            capabilities.setCapability("platformName", System.getProperty("platformName"));
-            capabilities.setCapability("platformVersion", System.getProperty("platformVersion"));
-            capabilities.setCapability("deviceName", System.getProperty("deviceName"));
+            capabilities.setCapability("platformName", PLATFORM_NAME);
+            capabilities.setCapability("platformVersion", PLATFORM_VERSION);
+            capabilities.setCapability("deviceName", DEVICE_NAME);
             capabilities.setCapability("udid", System.getProperty("udid"));
             capabilities.setCapability("bundleId", System.getProperty("bundleId"));
             capabilities.setCapability("automationName", System.getProperty("automationName"));
@@ -55,6 +68,11 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
         }
     }
 
+    /**
+     * Sets endpoint for Appium Server.
+     *
+     * @param endpoint URL where the Appium Server is running
+     */
     public SELF withEndpoint(URL endpoint) {
         this.endpoint = endpoint;
 

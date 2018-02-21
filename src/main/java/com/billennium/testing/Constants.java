@@ -1,17 +1,45 @@
 package com.billennium.testing;
 
-public class Constants {
+/**
+ * All value which must be provided by user to actually use <b>TAH</b>. Parameters can by provided as Maven parameters
+ * or in a property file with <i>surefire-plugin</i> with <i>systemPropertiesFile</i> tag included.
+ * There is not necessary to pass all parameters if it is tested a web application or a test suite generation
+ * functionality is not used.
+ */
+public abstract class Constants {
 
+    //    System variables (no need for initialization)
+    public static final String USER_NAME = System.getProperty("user.name");
+    public static final String OS_NAME = System.getProperty("os.name");
+    public static final String OS_VERSION = System.getProperty("os.version");
+    public static final String OS_ARCH = System.getProperty("os.arch");
+
+    //    Test output and source data
+    public static final String TEST_OUTPUT = System.getProperty("output.directory");
+    public static final String TEST_SETUP = System.getProperty("setup.directory");
+    public static final String TEST_DATA_DIRECTORY = System.getProperty("setup.test.data.directory");
+    public static final String TEST_SUITE_FILE = System.getProperty("setup.test.suite.file");
+    public static final String TEST_LOG = System.getProperty("output.test.log.file");
+
+    //    Path to WebDriver
+    public static final String DRIVER_PATH = System.getProperty("setup.driver.file");
+
+    //    Used for reporting purposes
     public static final String PROJECT_NAME = System.getProperty("test.project.name");
     public static final String RUN_NAME = System.getProperty("test.run.name");
-    public static final String OS_NAME = System.getProperty("os.name");
-    public static final String TEST_OUTPUT = System.getProperty("output.directory");
-    public static final String TEST_DATA = System.getProperty("setup.xls.file");
-    public static final String DRIVER_PATH = System.getProperty("setup.driver.file");
-    public static final String QUERY_PATH = System.getProperty("setup.query.file");
-    public static final String TEST_DATA_DIRECTORY = System.getProperty("setup.test.data.directory");
-    public static final String TEST_LOG = System.getProperty("output.test.log");
+    public static final String ENVIRONMENT_NAME = System.getProperty("environment");
 
-//    Used for mobile application testing
-    public static final String APP_PATH = System.getProperty("setup.test.app.file");
+    //    Used for generating custom TestNG suite
+    public static final String TEST_DATA = System.getProperty("setup.xls.file");
+    public static final String QUERY_PATH = System.getProperty("setup.query.file");
+
+    //    Used for web application testing
+    public static final String START_URL = System.getProperty("start-url");
+    public static final String BROWSER_NAME = System.getProperty("browserName");
+
+    //    Used for mobile application testing only
+    public static final String APP_PATH = System.getProperty("mobile.test.app.file");
+    public static final String PLATFORM_NAME = System.getProperty("mobile.platform.name");
+    public static final String PLATFORM_VERSION = System.getProperty("mobile.platform.version");
+    public static final String DEVICE_NAME = System.getProperty("mobile.device.name");
 }

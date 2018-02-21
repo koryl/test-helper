@@ -8,9 +8,8 @@
 *.ipr
 
 # Compilation output
-*/target/
-*/test-output/
-*.class
+*target/
+*test-output/
 
 # Log file
 *.log
@@ -22,7 +21,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
 *.zip
