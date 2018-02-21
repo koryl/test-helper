@@ -1,4 +1,15 @@
-# Compiled class file
+# FIles related to IDE
+.classpath
+.project
+.settings
+.idea
+.metadata
+*.iml
+*.ipr
+
+# Compilation output
+*/target/
+*/test-output/
 *.class
 
 # Log file
