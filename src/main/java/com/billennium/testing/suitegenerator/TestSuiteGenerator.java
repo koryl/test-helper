@@ -14,7 +14,7 @@ import static java.util.Objects.isNull;
 /**
  * <code><b>TestSuiteGenerator</b></code> is created for generating custom TestNG suites in runtime. To actually use
  * <code><b>TestSuiteGenerator</b></code> it must be implemented TestNG <code>IAlterSuiteListener</code> for passing a generated
- * test suite. It must be also provided .xls file which contains data of your test cases in Sheet named <i>TESTCASES/i>.
+ * test suite. It must be also provided .xls file which contains data of your test cases in Sheet named <i>TESTCASES</i>.
  * A spreadsheet is treated as a database from which you could choose which test cases would be run. For this
  * purpose query.txt file should be provided.
  */

@@ -3,8 +3,7 @@ package com.billennium.testing;
 /**
  * All value which must be provided by user to actually use <b>TAH</b>. Parameters can by provided as Maven parameters
  * or in a property file with <i>surefire-plugin</i> with <i>systemPropertiesFile</i> tag included.
- * There is not necessary to pass all parameters if it is tested a web application or a test suite generation
- * functionality is not used.
+ * Bear in mind that not all parameters are mandatory
  */
 public abstract class Constants {
 

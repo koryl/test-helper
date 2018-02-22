@@ -72,6 +72,7 @@ public abstract class AppiumDriverBuilder<SELF, DRIVER extends AppiumDriver> {
      * Sets endpoint for Appium Server.
      *
      * @param endpoint URL where the Appium Server is running
+     * @return
      */
     public SELF withEndpoint(URL endpoint) {
         this.endpoint = endpoint;
