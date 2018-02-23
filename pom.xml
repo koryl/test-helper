@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.billennium.testing</groupId>
     <artifactId>test-helper</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
 
     <name>Test Automation Helper</name>
     <description>Library containing reusable methods which could be used across test automation projects</description>
@@ -32,7 +30,8 @@
         <connection>scm:git:https://github.com/koryl/test-helper.git</connection>
         <developerConnection>scm:git:https://github.com/koryl/test-helper.git</developerConnection>
         <url>https://github.com/koryl/test-helper</url>
-    </scm>
+      <tag>test-helper-0.1</tag>
+  </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
