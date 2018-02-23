@@ -1,17 +1,17 @@
-package com.billennium.testing.reporter;
+package io.github.koryl.tah.reporter;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.billennium.testing.logger.Log;
+import io.github.koryl.tah.logger.Log;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import static com.billennium.testing.Constants.*;
+import static io.github.koryl.tah.Constants.*;
 
 /**
  * <b>ReportManager</b> uses ExtentReport framework for generating report after test execution. It is recommend to use

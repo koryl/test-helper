@@ -1,4 +1,4 @@
-package com.billennium.testing.authentication;
+package io.github.koryl.tah.authentication;
 
 /**
  * Login and password for a tested app should be provided as Maven parameter.

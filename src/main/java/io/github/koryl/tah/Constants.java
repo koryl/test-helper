@@ -1,4 +1,4 @@
-package com.billennium.testing;
+package io.github.koryl.tah;
 
 /**
  * All value which must be provided by user to actually use <b>TAH</b>. Parameters can by provided as Maven parameters

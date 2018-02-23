@@ -1,13 +1,13 @@
-package com.billennium.testing.actions;
+package io.github.koryl.tah.actions;
 
-import com.billennium.testing.logger.Log;
+import io.github.koryl.tah.logger.Log;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-import static com.billennium.testing.Constants.TEST_DATA_DIRECTORY;
+import static io.github.koryl.tah.Constants.TEST_DATA_DIRECTORY;
 
 /**
  * Easy file parser to use in Page Objects. A file should be placed in TEST_DATA_DIRECTORY.

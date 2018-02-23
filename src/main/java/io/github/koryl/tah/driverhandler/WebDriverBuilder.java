@@ -1,4 +1,4 @@
-package com.billennium.testing.driverhandler;
+package io.github.koryl.tah.driverhandler;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +7,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.net.URL;
 
-import static com.billennium.testing.Constants.DRIVER_PATH;
+import static io.github.koryl.tah.Constants.DRIVER_PATH;
 
 /**
  * Class created to handle WebDriver instance.

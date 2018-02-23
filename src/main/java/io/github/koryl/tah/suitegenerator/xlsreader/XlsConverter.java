@@ -1,8 +1,8 @@
-package com.billennium.testing.suitegenerator.xlsreader;
+package io.github.koryl.tah.suitegenerator.xlsreader;
 
-import com.billennium.testing.Constants;
-import com.billennium.testing.logger.Log;
-import com.billennium.testing.suitegenerator.suite.Suite;
+import io.github.koryl.tah.Constants;
+import io.github.koryl.tah.logger.Log;
+import io.github.koryl.tah.suitegenerator.suite.Suite;
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
@@ -12,10 +12,9 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.File;
 import java.util.List;
 
-import static com.billennium.testing.Constants.PROJECT_NAME;
-import static com.billennium.testing.Constants.TEST_SUITE_FILE;
+import static io.github.koryl.tah.Constants.PROJECT_NAME;
+import static io.github.koryl.tah.Constants.TEST_SUITE_FILE;
 import static com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator.Feature.WRITE_XML_DECLARATION;
-import static java.util.Arrays.asList;
 
 public class XlsConverter {
 

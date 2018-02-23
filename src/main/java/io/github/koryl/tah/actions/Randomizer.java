@@ -1,9 +1,9 @@
-package com.billennium.testing.actions;
+package io.github.koryl.tah.actions;
 
-import com.billennium.testing.logger.Log;
+import io.github.koryl.tah.logger.Log;
 import org.apache.commons.lang3.RandomStringUtils;
 
-import static com.billennium.testing.actions.Randomizer.Type.*;
+import static io.github.koryl.tah.actions.Randomizer.Type.*;
 
 /**
  * It is used for populating fields or text boxes with random String values.

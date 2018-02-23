@@ -1,7 +1,7 @@
-package com.billennium.testing.screenshooter;
+package io.github.koryl.tah.screenshooter;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.billennium.testing.logger.Log;
+import io.github.koryl.tah.logger.Log;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -10,9 +10,9 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.io.IOException;
 
-import static com.billennium.testing.Constants.RUN_NAME;
-import static com.billennium.testing.Constants.TEST_OUTPUT;
-import static com.billennium.testing.reporter.ReportManager.getTest;
+import static io.github.koryl.tah.Constants.RUN_NAME;
+import static io.github.koryl.tah.Constants.TEST_OUTPUT;
+import static io.github.koryl.tah.reporter.ReportManager.getTest;
 import static java.time.LocalDateTime.now;
 import static java.time.format.DateTimeFormatter.ofPattern;
 

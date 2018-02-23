@@ -1,14 +1,14 @@
-package com.billennium.testing.suitegenerator;
+package io.github.koryl.tah.suitegenerator;
 
-import com.billennium.testing.logger.Log;
-import com.billennium.testing.suitegenerator.xlsreader.XlsConverter;
+import io.github.koryl.tah.logger.Log;
+import io.github.koryl.tah.suitegenerator.xlsreader.XlsConverter;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import static com.billennium.testing.Constants.QUERY_PATH;
-import static com.billennium.testing.Constants.TEST_DATA;
+import static io.github.koryl.tah.Constants.QUERY_PATH;
+import static io.github.koryl.tah.Constants.TEST_DATA;
 import static java.util.Objects.isNull;
 
 /**

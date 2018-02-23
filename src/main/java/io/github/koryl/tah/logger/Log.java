@@ -1,4 +1,4 @@
-package com.billennium.testing.logger;
+package io.github.koryl.tah.logger;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

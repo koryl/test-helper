@@ -1,4 +1,4 @@
-package com.billennium.testing.suitegenerator.suite;
+package io.github.koryl.tah.suitegenerator.suite;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;

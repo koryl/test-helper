@@ -1,4 +1,4 @@
-package com.billennium.testing.driverhandler;
+package io.github.koryl.tah.driverhandler;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -7,7 +7,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.URL;
 
-import static com.billennium.testing.Constants.*;
+import static io.github.koryl.tah.Constants.*;
 
 /**
  * Class created to handle AppiumDriver instance.
